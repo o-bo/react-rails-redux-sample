@@ -24,6 +24,10 @@ module ReactRailsReduxSample
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.assets.paths << Rails.root.join("node_modules", "bootstrap", "dist", "js")
+    config.assets.paths << Rails.root.join("node_modules", "bootstrap", "dist", "css")
+    config.assets.paths << Rails.root.join("node_modules", "bootstrap", "dist", "fonts")
+
     config.browserify_rails.commandline_options = '-t babelify'
   end
 end
