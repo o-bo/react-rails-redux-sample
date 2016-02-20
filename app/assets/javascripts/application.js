@@ -15,4 +15,7 @@
 //= require turbolinks
 //= require react_ujs
 //= require bootstrap
+//= require material
 //= require components
+
+$.material.init();

@@ -27,6 +27,8 @@ module ReactRailsReduxSample
     config.assets.paths << Rails.root.join("node_modules", "bootstrap", "dist", "js")
     config.assets.paths << Rails.root.join("node_modules", "bootstrap", "dist", "css")
     config.assets.paths << Rails.root.join("node_modules", "bootstrap", "dist", "fonts")
+    config.assets.paths << Rails.root.join("node_modules", "bootstrap-material-design", "dist", "js")
+    config.assets.paths << Rails.root.join("node_modules", "bootstrap-material-design", "dist", "css")
 
     config.browserify_rails.commandline_options = '-t babelify'
   end
