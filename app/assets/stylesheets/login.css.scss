@@ -1,0 +1,42 @@
+.login-body {
+  background: asset_url("login-bg.jpg") no-repeat center center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  .login-container {
+    background: rgba(54, 25, 25, 0.5);
+    border-radius: 3px;
+    margin: 200px auto 0;
+    padding: 40px;
+    width: 500px;
+
+    form {
+      background: white;
+      border-radius: 3px;
+      box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      width: 100%;
+
+      h1 {
+        background: #009788;
+        border-radius: 3px 3px 0 0;
+        box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        color: white;
+        font-size: 30px;
+        line-height: 150%;
+        padding: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+      }
+
+      .fields {
+        padding: 20px;
+      }
+    }
+  }
+}
+
