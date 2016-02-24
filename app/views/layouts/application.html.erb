@@ -8,6 +8,10 @@
 </head>
 <body class="<% unless current_user %> login-body <% end %>">
 
+<% if current_user %>
+  <%= render partial: "layouts/top_bar" %>
+<% end %>
+
 <%= yield %>
 
 </body>

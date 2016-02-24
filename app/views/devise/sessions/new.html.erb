@@ -1,19 +1,26 @@
 <div class="login-container">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <h1>Sample</h1>
+
     <div class="fields">
       <%= render partial: "layouts/alerts" %>
+
       <div class="form-group label-floating is-empty">
         <label for="user-email" class="control-label">Email address</label>
         <input type="email" class="form-control" id="user-email" name="user[email]">
-        <span class="material-input"></span></div>
+        <span class="material-input"></span>
+      </div>
+
       <div class="form-group label-floating is-empty">
         <label for="user-password" class="control-label">Password</label>
         <input type="password" class="form-control" id="user-password" name="user[password]">
-        <span class="material-input"></span></div>
+        <span class="material-input"></span>
+      </div>
+
       <div class="actions">
         <%= f.submit "Log in", class: "btn btn-lg btn-raised btn-primary btn-block" %>
       </div>
+
       <%= render "devise/shared/links" %>
     </div>
   <% end %>

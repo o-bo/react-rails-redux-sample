@@ -57,6 +57,8 @@ gem 'react-rails', '1.6.0'
 
 gem 'browserify-rails'
 
+gem 'nprogress-rails'
+
 group :development do
 
   # Generate data relations graph

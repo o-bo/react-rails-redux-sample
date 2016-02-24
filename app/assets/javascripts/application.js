@@ -17,5 +17,11 @@
 //= require bootstrap
 //= require material
 //= require components
+//= require nprogress
+//= require nprogress-turbolinks
 
-$.material.init();
+var initPage = require('./init');
+
+$(document).on('ready page:load', function () {
+  return initPage();
+});
