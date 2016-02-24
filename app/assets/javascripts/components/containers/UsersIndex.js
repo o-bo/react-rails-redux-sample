@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom'
 import { Provider } from 'react-redux';
-import CounterApp from './CounterApp';
+import UsersApp from './UsersApp';
 import configureStore from '../store/configureStore';
-import {setCounter} from '../actions/counter'
 
 const store = configureStore();
 
-export default class Root extends Component {
-  componentWillMount() {
-    store.dispatch(setCounter(this.props.counter));
-  }
+class UsersIndex extends Component {
+
   render() {
     return (
       <Provider store={store}>
-        <CounterApp />
+        <UsersApp />
       </Provider>
     );
   }
 }
+
+UsersIndex.propTypes = {
+  users : React.PropTypes.array.isRequired,
+};
+
+UsersIndex.defaultProps = {
+  users: [],
+};
+
+export default UsersIndex;

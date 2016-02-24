@@ -1,4 +1,4 @@
 window.React = require('react');
 window.ReactDOM = require('react-dom');
-window.Root  = require('./components/containers/Root.js').default;
-
+window.Home  = require('./components/containers/Home.js').default;
+window.UsersIndex  = require('./components/containers/UsersIndex.js').default;
