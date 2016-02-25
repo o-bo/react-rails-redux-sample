@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch';
 
 const BASE_URL = 'http://localhost:3000/'
 
-function callApi(endpoint) {
+function callApi(endpoint, method = 'get', body = null) {
 
   let config = {
     credentials: 'same-origin',
@@ -12,7 +12,7 @@ function callApi(endpoint) {
     },
   }
 
-  return fetch(BASE_URL + endpoint, config)
+  return fetch(BASE_URL + endpoint, {...config, method, body})
   .then(response =>
         response.json().then(json => ({ json, response }))
        ).then(({ json, response }) => {
@@ -39,13 +39,13 @@ export default store => next => action => {
     return next(action)
   }
 
-  let { endpoint, types } = callAPI
+  let { endpoint, types, method, body } = callAPI
 
   const [ requestType, successType, errorType ] = types
 
   // Passing the authenticated boolean back in our data will let us distinguish
   // between normal and secret quotes
-  return callApi(endpoint).then(
+  return callApi(endpoint, method, body).then(
     response =>
     next({
       response,
