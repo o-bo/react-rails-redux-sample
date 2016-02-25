@@ -12,7 +12,7 @@ class User extends Component {
           <div className="card-content">
 
             <div className="card-image bg-info">
-              <h3 className="text-center">{this.props.user.email}</h3>
+              <h4 className="text-center">{this.props.user.email}</h4>
             </div>
 
             <div className="card-body">
