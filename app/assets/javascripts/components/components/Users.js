@@ -1,6 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 
 class Users extends Component {
+
+  componentWillMount() {
+    this.props.fetchUsers();
+  }
+
   render() {
     return (
       <p>
@@ -10,7 +15,8 @@ class Users extends Component {
 }
 
 Users.propTypes = {
-  users: PropTypes.array.isRequired
+  users: PropTypes.array.isRequired,
+  fetchUsers: PropTypes.func.isRequired
 };
 
 Users.defaultProps = {
