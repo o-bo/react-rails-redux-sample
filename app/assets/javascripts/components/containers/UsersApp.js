@@ -4,8 +4,11 @@ import Users from '../components/Users';
 import * as UsersActions from '../actions/users';
 
 function mapStateToProps(state) {
+  const { usersStore } = state
+
   return {
-    users: state.users
+    isFetching: usersStore.isFetching,
+    users: usersStore.users
   }
 }
 
