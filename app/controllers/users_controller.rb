@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def index
     respond_to do |format|
       format.html {}
-      format.json { render json: Users.all.to_json }
+      format.json { render json: User.all.to_json }
     end
   end
 end
