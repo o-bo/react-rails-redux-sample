@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import _ from 'lodash';
+import User from './user';
 
 class Users extends Component {
 
@@ -8,8 +10,13 @@ class Users extends Component {
 
   render() {
     return (
-      <p>
-      </p>
+      <div>
+        {
+          _.map(this.props.users, function(user) {
+            return <User key={user.id} user={user} />
+          })
+        }
+      </div>
     );
   }
 }
