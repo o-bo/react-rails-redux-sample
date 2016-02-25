@@ -8,11 +8,9 @@ import {setCounter} from '../actions/counter'
 const store = configureStore();
 
 export default class Home extends Component {
-
   componentWillMount() {
     store.dispatch(setCounter(this.props.counter));
   }
-
   render() {
     return (
       <Provider store={store}>
@@ -21,11 +19,3 @@ export default class Home extends Component {
     );
   }
 }
-
-Home.propTypes = {
-  counter : React.PropTypes.number.isRequired,
-};
-
-Home.defaultProps = {
-  counter: 1,
-};
