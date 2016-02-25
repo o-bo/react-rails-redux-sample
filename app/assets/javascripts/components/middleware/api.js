@@ -4,15 +4,21 @@ const BASE_URL = 'http://localhost:3000/'
 
 function callApi(endpoint, method = 'get', body = null) {
 
-  let config = {
+  const config = {
     credentials: 'same-origin',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
+    method,
+    body: JSON.stringify({
+      ...body,
+      authenticity_token: $('meta[name=csrf-token]').attr('content')
+    })
   }
+  console.log(config);
 
-  return fetch(BASE_URL + endpoint, {...config, method, body})
+  return fetch(BASE_URL + endpoint, config)
   .then(response =>
         response.json().then(json => ({ json, response }))
        ).then(({ json, response }) => {

@@ -15,9 +15,10 @@ class UserForm extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    const user = { ...this.state };
-    console.log(user);
-    this.props.onPost(user);
+    const params = {
+      registration: {...this.state}
+    };
+    this.props.onPost(params);
   }
 
 
