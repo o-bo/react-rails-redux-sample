@@ -19,15 +19,14 @@ function callApi(endpoint, method = 'get', body = null) {
   console.log(config);
 
   return fetch(BASE_URL + endpoint, config)
-  .then(response =>
-        response.json().then(json => ({ json, response }))
-       ).then(({ json, response }) => {
-         if (!response.ok) {
-           return Promise.reject(json)
-         }
-
-         return json
-       }).catch(err => console.log(err))
+  .then(response => response.json().then(json => ({ json, response })))
+  .then(({ json, response }) => {
+    if (!response.ok) {
+      return Promise.reject(json)
+    }
+    return json
+  })
+  .catch(err => console.log(err))
 }
 
 export const CALL_API = Symbol('Call API')
