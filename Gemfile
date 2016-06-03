@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5.1'
+gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2', '0.4.2'
 # Use SCSS for stylesheets
@@ -40,7 +40,7 @@ gem 'mini_magick'
 gem 'redis'
 
 # Elastic search
-gem 'chewy', '0.8.3'
+gem 'chewy', '0.8.4'
 
 # Workers
 gem 'sidekiq', '< 5'
@@ -53,7 +53,7 @@ gem "figaro"
 # Serializer
 gem 'active_model_serializers'
 
-gem 'react-rails', '1.6.0'
+gem 'react-rails', '1.7.1'
 
 gem 'browserify-rails'
 
