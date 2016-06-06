@@ -1,4 +1,4 @@
-import { CALL_API, GET, POST } from '../middleware/api'
+import { CALL_API, GET, POST } from '../../middleware/api'
 
 export const USERS_FETCH_REQUEST = 'USERS_FETCH_REQUEST'
 export const USERS_FETCH_SUCCESS = 'USERS_FETCH_SUCCESS'

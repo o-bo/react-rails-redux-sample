@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom'
 import { Provider } from 'react-redux';
-import CounterApp from './CounterApp';
-import configureStore from '../store/configureStore';
-import {setCounter} from '../actions/counter'
+import CounterApp from '../../Counter/containers/CounterApp';
+import configureStore from '../../store/configureStore';
+import {setCounter} from '../../Counter/actions/counter'
 
 const store = configureStore();
 
